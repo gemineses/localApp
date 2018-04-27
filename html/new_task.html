@@ -11,16 +11,24 @@
     </div>
   </ons-toolbar>
 
-  <ons-list-title>Add a new task</ons-list-title>
+  <ons-list-title>Add a new element</ons-list-title>
   <ons-list>
     <ons-list-item modifier="nodivider">
       <div class="center">
-        <ons-input id="title-input" type="text" placeholder="I want to..." float></ons-input>
+        <ons-input id="title-input" type="text" placeholder="Name of new element" float></ons-input>
       </div>
     </ons-list-item>
     <ons-list-item modifier="nodivider">
       <div class="center">
-        <ons-input id="category-input" type="text" placeholder="Category" float></ons-input>
+        <!--<ons-input id="category-input" type="text" placeholder="Category" float></ons-input>-->
+        <h3></h3>
+        <ons-select id="category-input">
+          <option value="" selectedIndex>Category</option>
+          <option value="Medicines">Medicines</option>
+          <option value="Credit cards">Credit cards</option>
+          <option value="Contacts">Contacts</option>
+          <option value="Memberships">Memberships</option>
+        </ons-select>
       </div>
     </ons-list-item>
     <ons-list-item modifier="nodivider">
