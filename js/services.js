@@ -304,4 +304,60 @@ myApp.services = {
       urgent: false
     }
   ]
+
+  ////////////////////////
+  // Default //
+  ////////////////////////
+/*
+  defaults : [
+    {
+      title: 'Paracetamol',
+      category: 'Medicines',
+      description: '1 at 12:00pm',
+      highlight: false,
+      urgent: false
+    }
+  ];
+*/
+
+  ////////////////////////
+  // Membership //
+  ////////////////////////
+
+/*
+  membership : [
+    {}
+  ];
+*/
+
+  ////////////////////////
+  // Credit card //
+  ////////////////////////
+
+/*
+  credit_card : [
+    {}
+  ];
+*/
+
+  ////////////////////////
+  // Contact //
+  ////////////////////////
+
+/*
+  contact : [
+    {}
+  ];
+*/
+
+  ////////////////////////
+  // Medicines //
+  ////////////////////////
+
+/*
+  medicines : [
+    {}
+  ];
+*/
+
 };
