@@ -12,11 +12,21 @@ myApp.services = {
     // Creates a new task and attaches it to the pending task list.
     create: function(data) {
       // Task item template.
-      var taskItem = ons.createElement(
-        '<ons-list-item tappable category="' + myApp.services.categories.parseId(data.category)+ '">' +
-          '<label class="left">' +
-           '<ons-checkbox></ons-checkbox>' +
-          '</label>' +
+      list = '<ons-list-item tappable category="' + myApp.services.categories.parseId(data.category)+ '">' +
+          '<label class="left">';
+      if(data.category=='Medicines'){
+        list += '<ons-icon icon="ion-medkit" class="list-item__icon"></ons-icon>';
+      }else if(data.category=='Credit cards'){
+        list += '<ons-icon icon="ion-card" class="list-item__icon"></ons-icon>';
+      }else if(data.category=='Contacts'){
+        list += '<ons-icon icon="ion-person" class="list-item__icon"></ons-icon>';  
+      }else {//memberships
+        list += '<ons-icon icon="ion-bag" class="list-item__icon"></ons-icon>';
+      }
+      
+      
+
+      list += '</label>' +
           '<div class="center">' +
             data.title +
           '</div>' +
@@ -24,7 +34,8 @@ myApp.services = {
             '<ons-icon style="color: grey; padding-left: 4px" icon="ion-ios-trash-outline, material:md-delete"></ons-icon>' +
           '</div>' +
         '</ons-list-item>'
-      );
+
+      var taskItem = ons.createElement(list);
 
       // Store data within the element.
       taskItem.data = data;
