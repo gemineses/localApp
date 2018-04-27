@@ -123,5 +123,9 @@ myApp.controllers = {
         ons.notification.alert('You must provide a task title.');
       }
     };
+  },
+
+  category_input: function(){
+    console.log(document.querySelector('#category-input'));
   }
 };
