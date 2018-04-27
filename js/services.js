@@ -128,16 +128,30 @@ myApp.services = {
       var categoryId = myApp.services.categories.parseId(categoryLabel);
 
       // Category item template.
+      if(categoryLabel=='Medicines'){
+        list = '<ons-icon icon="ion-medkit" class="list-item__icon"></ons-icon>';
+      }else if(categoryLabel=='Credit cards'){
+        list = '<ons-icon icon="ion-card" class="list-item__icon"></ons-icon>';
+      }else if(categoryLabel=='Contacts'){
+        list = '<ons-icon icon="ion-person" class="list-item__icon"></ons-icon>';  
+      }else {//memberships
+        list = '<ons-icon icon="ion-bag" class="list-item__icon"></ons-icon>';
+      }
+
       var categoryItem = ons.createElement(
         '<ons-list-item tappable category-id="' + categoryId + '">' +
           '<div class="left">' +
             '<ons-radio name="categoryGroup" input-id="radio-'  + categoryId + '"></ons-radio>' +
+            list +
           '</div>' +
           '<label class="center" for="radio-' + categoryId + '">' +
             (categoryLabel || 'No category') +
           '</label>' +
         '</ons-list-item>'
       );
+
+
+
 
       // Adds filtering functionality to this category item.
       myApp.services.categories.bindOnCheckboxChange(categoryItem);
