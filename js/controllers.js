@@ -83,8 +83,8 @@ myApp.controllers = {
     page.querySelector('#title-input').value = element.data.title;
     page.querySelector('#category-input').value = element.data.category;
     page.querySelector('#description-input').value = element.data.description;
-    page.querySelector('#highlight-input').checked = element.data.highlight;
-    page.querySelector('#urgent-input').checked = element.data.urgent;
+    //page.querySelector('#highlight-input').checked = element.data.highlight;
+    //page.querySelector('#urgent-input').checked = element.data.urgent;
 
     // Set button functionality to save an existing task.
     page.querySelector('[component="button/save-task"]').onclick = function() {
@@ -106,8 +106,8 @@ myApp.controllers = {
                 title: newTitle,
                 category: page.querySelector('#category-input').value,
                 description: page.querySelector('#description-input').value,
-                ugent: element.data.urgent,
-                highlight: page.querySelector('#highlight-input').checked
+                ugent: false,
+                highlight: false
               }
             );
 
