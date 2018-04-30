@@ -15,7 +15,7 @@
   <ons-list>
     <ons-list-item modifier="nodivider">
       <div class="center">
-        <ons-input id="title-input" type="text" placeholder="Name" float></ons-input>
+        <ons-input id="name-input" type="text" placeholder="Name" float></ons-input>
       </div>
     </ons-list-item>
     <ons-list-item modifier="nodivider">
@@ -35,6 +35,11 @@
         <ons-input id="description-input" type="text" placeholder="Remarks" float></ons-input>
       </div>
     </ons-list-item>
+    <ons-list-item modifier="nodivider">
+      <div class="center">
+        <ons-input id="status" type="text" placeholder="Status" float></ons-input>
+      </div>
+    </ons-list-item>
   </ons-list>
 
   <ons-list-title>Membership data</ons-list-title>
@@ -42,11 +47,6 @@
     <ons-list-item modifier="nodivider">
       <div class="center">
         <ons-input id="date-expired" type="text" placeholder="Date expired" float></ons-input>
-      </div>
-    </ons-list-item>
-    <ons-list-item modifier="nodivider">
-      <div class="center">
-        <ons-input id="status" type="text" placeholder="Status" float></ons-input>
       </div>
     </ons-list-item>
     <ons-list-item modifier="nodivider">
@@ -89,7 +89,7 @@
     </ons-list-item>
     <ons-list-item modifier="nodivider">
       <div class="center">
-        <ons-input id="status" type="text" placeholder="Status" float></ons-input>
+        <ons-input id="answer" type="text" placeholder="answer" float></ons-input>
       </div>
     </ons-list-item>
   </ons-list>
@@ -98,7 +98,44 @@
   <ons-list>
     <ons-list-item modifier="nodivider">
       <div class="center">
-        <ons-input id="address" type="text" placeholder="address" float></ons-input>
+        <ons-select id="title-select">
+          <option value="" selectedIndex>Title</option>
+          <option value="Account Executive">Account Executive</option>
+          <option value="Account Manager">Account Manager</option>
+          <option value="CEO">CEO</option>
+          <option value="CSR">CSR</option>
+          <option value="Mr">Mr</option>
+          <option value="Mrs">Mrs</option>
+          <option value="Person in charge">Person in charge</option>
+          <option value="President">President</option>
+          <option value="Producer">Producer</option>
+          <option value="Senior Vice President">Senior Vice President</option>
+        </ons-select>
+      </div>
+    </ons-list-item>
+    <ons-list-item modifier="nodivider">
+      <div class="center">
+        <ons-input id="last_name" type="text" placeholder="First name" float></ons-input>
+      </div>
+    </ons-list-item>
+    <ons-list-item modifier="nodivider">
+      <div class="center">
+        <ons-input id="middle_name" type="text" placeholder="Middle name" float></ons-input>
+      </div>
+    </ons-list-item>
+    <ons-list-item modifier="nodivider">
+      <div class="center">
+        <ons-input id="last_name" type="text" placeholder="Last name" float></ons-input>
+      </div>
+    </ons-list-item>
+    <ons-list-item modifier="nodivider">
+      <div class="center">
+        <ons-input id="dba_name" type="text" placeholder="dba_name" float></ons-input>
+      </div>
+    </ons-list-item>
+    <ons-list-item modifier="nodivider">
+      <div class="center">
+        <ons-input id="street" type="text" placeholder="street" float></ons-input>
       </div>
     </ons-list-item>
     <ons-list-item modifier="nodivider">
@@ -123,7 +160,22 @@
     </ons-list-item>
     <ons-list-item modifier="nodivider">
       <div class="center">
-        <ons-input id="status" type="text" placeholder="Status" float></ons-input>
+        <ons-input id="phone" type="text" placeholder="phone" float></ons-input>
+      </div>
+    </ons-list-item>
+    <ons-list-item modifier="nodivider">
+      <div class="center">
+        <ons-input id="email" type="text" placeholder="email" float></ons-input>
+      </div>
+    </ons-list-item>
+    <ons-list-item modifier="nodivider">
+      <div class="center">
+        <ons-input id="fax" type="text" placeholder="fax" float></ons-input>
+      </div>
+    </ons-list-item>
+    <ons-list-item modifier="nodivider">
+      <div class="center">
+        <ons-input id="dob" type="text" placeholder="Date of birth" float></ons-input>
       </div>
     </ons-list-item>
   </ons-list>
@@ -143,11 +195,6 @@
     <ons-list-item modifier="nodivider">
       <div class="center">
         <ons-input id="frecuency" type="text" placeholder="frecuency" float></ons-input>
-      </div>
-    </ons-list-item>
-    <ons-list-item modifier="nodivider">
-      <div class="center">
-        <ons-input id="status" type="text" placeholder="Status" float></ons-input>
       </div>
     </ons-list-item>
   </ons-list>
