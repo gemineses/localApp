@@ -75,9 +75,10 @@ myApp.db_object = {
 	data_format: function(text){
 		formatted = text.title+"---"
 		+ text.category+"---"
+		+ new Date().toLocaleString()+"---"
+		+ text.date_expired+"---"
 		+ text.remarks+"---"
 		+ text.status+"---"
-		+ text.date_expired+"---"
 		+ text.cost+"---"
 		+ text.number+"---"
 		+ text.type_card+"---"
