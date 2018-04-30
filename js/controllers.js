@@ -45,29 +45,52 @@ myApp.controllers = {
     // Set button functionality to save a new task.
     Array.prototype.forEach.call(page.querySelectorAll('[component="button/save-task"]'), function(element) {
       element.onclick = function() {
-        var newTitle = page.querySelector('#title-input').value;
+        var newTitle = page.querySelector('#name-input').value;
 
-        if (newTitle) {
-          // If input title is not empty, create a new task.
-          myApp.services.tasks.create(
-            {
-              title: newTitle,
-              category: page.querySelector('#category-input').value,
-              description: page.querySelector('#description-input').value,
-              highlight: page.querySelector('#highlight-input').checked,
-              urgent: page.querySelector('#urgent-input').checked
+
+        getting_data = {
+                title: newTitle,
+                category: page.querySelector('#category-select-input').value,
+                date_created: page.querySelector('#date-created-input').value,
+                date_expired: page.querySelector('#date-expired-input').value,
+                remarks: page.querySelector('#remarks-input').value,
+                status: page.querySelector('#status-input').value,
+                cost: page.querySelector('#cost-input').value,
+                number: page.querySelector('#number-input').value,
+                type_card: page.querySelector('#type-card-select-input').value,
+                bank: page.querySelector('#bank-input').value,
+                security_questions: page.querySelector('#security-questions-input').value,
+                answer: page.querySelector('#answer-input').value,
+                title_select: page.querySelector('#title-select-input').value,
+                middle_name: page.querySelector('#middle-name-input').value,
+                last_name: page.querySelector('#last-name-input').value,
+                dba_name: page.querySelector('#dba-name-input').value,
+                street: page.querySelector('#street-input').value,
+                city: page.querySelector('#city-input').value,
+                state: page.querySelector('#state-input').value,
+                zipcode: page.querySelector('#zipcode-input').value,
+                country: page.querySelector('#country-input').value,
+                phone: page.querySelector('#phone-input').value,
+                email: page.querySelector('#email-input').value,
+                fax: page.querySelector('#fax-input').value,
+                dob: page.querySelector('#dob-input').value,
+                prescription: page.querySelector('#prescription-input').value,
+                frecuency: page.querySelector('#frecuency-input').value,
+                highlight: false,
+                urgent: false
             }
-          );
+        
+        myApp.db_object.execute_insert(getting_data)
+        
+        // If input title is not empty, create a new task.
+        
+        //myApp.services.tasks.create(getting_data);
 
-          // Set selected category to 'All', refresh and pop page.
-          document.querySelector('#default-category-list ons-list-item ons-radio').checked = true;
-          document.querySelector('#default-category-list ons-list-item').updateCategoryView();
-          document.querySelector('#myNavigator').popPage();
+        // Set selected category to 'All', refresh and pop page.
+        /*document.querySelector('#default-category-list ons-list-item ons-radio').checked = true;
+        document.querySelector('#default-category-list ons-list-item').updateCategoryView();
+        document.querySelector('#myNavigator').popPage();*/
 
-        } else {
-          // Show alert if the input title is empty.
-          ons.notification.alert('You must provide a task title.');
-        }
       };
     });
   },
@@ -80,15 +103,15 @@ myApp.controllers = {
     var element = page.data.element;
 
     // Fill the view with the stored data.
-    page.querySelector('#title-input').value = element.data.title;
+    page.querySelector('#name-input').value = element.data.title;
     page.querySelector('#category-input').value = element.data.category;
-    page.querySelector('#description-input').value = element.data.description;
+    page.querySelector('#remarks-input').value = element.data.description;
     //page.querySelector('#highlight-input').checked = element.data.highlight;
     //page.querySelector('#urgent-input').checked = element.data.urgent;
 
     // Set button functionality to save an existing task.
     page.querySelector('[component="button/save-task"]').onclick = function() {
-      var newTitle = page.querySelector('#title-input').value;
+      var newTitle = page.querySelector('#name-input').value;
 
       if (newTitle) {
         // If input title is not empty, ask for confirmation before saving.
@@ -101,20 +124,46 @@ myApp.controllers = {
         ).then(function(buttonIndex) {
           if (buttonIndex === 1) {
             // If 'Save' button was pressed, overwrite the task.
-            myApp.services.tasks.update(element,
-              {
+
+            getting_data = {
                 title: newTitle,
-                category: page.querySelector('#category-input').value,
-                description: page.querySelector('#description-input').value,
-                ugent: false,
-                highlight: false
-              }
-            );
+                category: page.querySelector('#category-select-input').value,
+                date_created: page.querySelector('#date-created-input').value,
+                date_expired: page.querySelector('#date-expired-input').value,
+                remarks: page.querySelector('#remarks-input').value,
+                status: page.querySelector('#status-input').value,
+                cost: page.querySelector('#cost-input').value,
+                number: page.querySelector('#number-input').value,
+                type_card: page.querySelector('#type-card-select-input').value,
+                bank: page.querySelector('#bank-input').value,
+                security_questions: page.querySelector('#security_questions-input').value,
+                answer: page.querySelector('#answer-input').value,
+                title_select: page.querySelector('#title-select-input').value,
+                middle_name: page.querySelector('#middle-name-input').value,
+                last_name: page.querySelector('#last-name-input').value,
+                dba_name: page.querySelector('#dba-name-input').value,
+                street: page.querySelector('#street-input').value,
+                city: page.querySelector('#city-input').value,
+                state: page.querySelector('#state-input').value,
+                zipcode: page.querySelector('#zipcode-input').value,
+                country: page.querySelector('#country-input').value,
+                phone: page.querySelector('#phone-input').value,
+                email: page.querySelector('#email-input').value,
+                fax: page.querySelector('#fax-input').value,
+                dob: page.querySelector('#dob-input').value,
+                prescription: page.querySelector('#prescription-input').value,
+                frecuency: page.querySelector('#frecuency-input').value,
+                highlight: false,
+                urgent: false
+            }
+
+            //myApp.db_object.parseJSONToInsert(getting_data)
+            myApp.services.tasks.update(element,getting_data);
 
             // Set selected category to 'All', refresh and pop page.
-            document.querySelector('#default-category-list ons-list-item ons-radio').checked = true;
-            document.querySelector('#default-category-list ons-list-item').updateCategoryView();
-            document.querySelector('#myNavigator').popPage();
+            //document.querySelector('#default-category-list ons-list-item ons-radio').checked = true;
+            //document.querySelector('#default-category-list ons-list-item').updateCategoryView();
+            //document.querySelector('#myNavigator').popPage();
           }
         });
 
