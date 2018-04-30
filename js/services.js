@@ -247,7 +247,8 @@ myApp.services = {
   // Initial Data Service //
   ////////////////////////
 
-  fixtures: [
+  fixtures : []
+/*  fixtures: [
     {
       title: 'Costco',
       category: 'Memberships',
@@ -304,5 +305,5 @@ myApp.services = {
       highlight: false,
       urgent: false
     }
-  ]
+  ]*/
 };

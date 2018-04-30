@@ -26,21 +26,50 @@ myApp.db_object = {
 			var len = results.rows.length, i;
 			if(len>0){
 				for (i = 0; i < len; i++) { 
-					txt_out.push(results.rows.item(i));
+					list = results.rows.item(i).name.split("---")
+					txt_out.push(myApp.db_object.listToJson(list))
 				}
 				myApp.services.fixtures = txt_out
 			}else{
-				txt_out = [{
-					title: 'Costco',
-					category: 'Memberships',
-					description: 'Card No. 0001',
-					highlight: false,
-					urgent: false
-				}]
+				txt_out = [{}]
 				myApp.services.fixtures = txt_out
 			}
 		}, null); 
 		});
+	},
+
+	listToJson: function(text_array){
+		return {
+			title: text_array[0],
+	        category: text_array[1],
+	        date_created: text_array[2],
+	        date_expired: text_array[3],
+	        remarks: text_array[4],
+	        status: text_array[5],
+	        cost: text_array[6],
+	        number: text_array[7],
+	        type_card: text_array[8],
+	        bank: text_array[9],
+	        security_questions: text_array[10],
+	        answer: text_array[11],
+	        title_select: text_array[12],
+	        middle_name: text_array[13],
+	        last_name: text_array[14],
+	        dba_name: text_array[15],
+	        street: text_array[16],
+	        city: text_array[17],
+	        state: text_array[18],
+	        zipcode: text_array[19],
+	        country: text_array[20],
+	        phone: text_array[21],
+	        email: text_array[22],
+	        fax: text_array[23],
+	        dob: text_array[24],
+	        prescription: text_array[25],
+	        frecuency: text_array[26],
+	        highlight: false,
+	        urgent: false
+		}
 	},
 
 	data_format: function(text){
