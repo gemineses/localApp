@@ -104,14 +104,33 @@ myApp.controllers = {
     // Get the element passed as argument to pushPage.
     var element = page.data.element;
 
-    console.log("en detalles")
     /*console.log(myApp.services.fixtures)
     console.log(element.data.title)
     console.log(element.data.remarks)*/
     // Fill the view with the stored data.
+  
+  if(element.data.category != ""){
+    document.getElementById("membership-section").style.display = "none";
+    document.getElementById("credit-card-section").style.display = "none";
+    document.getElementById("contacts-section").style.display = "none";
+    document.getElementById("medicines-section").style.display = "none";
+  }
+  
 
-    console.log(element.data);
-    console.log(page.querySelector);
+  if(element.data.category == "Contacts"){
+    document.getElementById("contacts-section").style.display = "block";
+  }
+  if(element.data.category == "Medicines"){
+    document.getElementById("medicines-section").style.display = "block";
+  }
+  if(element.data.category == "Credit cards"){
+    document.getElementById("credit-card-section").style.display = "block";
+  }
+  if(element.data.category == "Memberships"){
+    document.getElementById("membership-section").style.display = "block"; 
+  }
+
+
 
     page.querySelector('#name-input').value = element.data.title;
     page.querySelector('#remarks-input').value = element.data.remarks;

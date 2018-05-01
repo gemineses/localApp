@@ -72,210 +72,217 @@
     </ons-list-item>
     
     <!--Membership Data-->
-
-    <ons-list-item modifier="nodivider">
-      <ons-if platform="ios other" class="left left-label">
-        Cost
-      </ons-if>
-      <div class="center">
-        <ons-input id="cost-input" type="text" placeholder="" float></ons-input>
-      </div>
-    </ons-list-item>
+    <div id="membership-section">
+      <ons-list-item modifier="nodivider">
+        <ons-if platform="ios other" class="left left-label">
+          Cost
+        </ons-if>
+        <div class="center">
+          <ons-input id="cost-input" type="text" placeholder="" float></ons-input>
+        </div>
+      </ons-list-item>
+    </div>
 
     <!-- Credit card -->
     
-    <ons-list-item modifier="nodivider">
-      <ons-if platform="ios other" class="left left-label">
-        Number
-      </ons-if>
-      <div class="center">
-        <ons-input id="number-input" type="text" placeholder="" float></ons-input>
-      </div>
-    </ons-list-item>
+    <div id="credit-card-section">
+      <ons-list-item modifier="nodivider">
+        <ons-if platform="ios other" class="left left-label">
+          Number
+        </ons-if>
+        <div class="center">
+          <ons-input id="number-input" type="text" placeholder="" float></ons-input>
+        </div>
+      </ons-list-item>
 
-    <ons-list-item modifier="nodivider">
-      <ons-if platform="ios other" class="left left-label">
-        Type Card
-      </ons-if>
-      <div class="center">
-        <ons-input id="type-card-select-input" type="text" placeholder="" float></ons-input>
-      </div>
-    </ons-list-item>
+      <ons-list-item class="credit-card-section" modifier="nodivider">
+        <ons-if platform="ios other" class="left left-label">
+          Type Card
+        </ons-if>
+        <div class="center">
+          <ons-input class="credit-card-section" id="type-card-select-input" type="text" placeholder="" float></ons-input>
+        </div>
+      </ons-list-item>
 
-    <ons-list-item modifier="nodivider">
-      <ons-if platform="ios other" class="left left-label">
-        Bank
-      </ons-if>
-      <div class="center">
-        <ons-input id="bank-input" type="text" placeholder="" float></ons-input>
-      </div>
-    </ons-list-item>
+      <ons-list-item class="credit-card-section" modifier="nodivider">
+        <ons-if platform="ios other" class="left left-label">
+          Bank
+        </ons-if>
+        <div class="center">
+          <ons-input id="bank-input" type="text" placeholder="" float></ons-input>
+        </div>
+      </ons-list-item>
 
-    <ons-list-item modifier="nodivider">
-      <ons-if platform="ios other" class="left left-label">
-        Security questions
-      </ons-if>
-      <div class="center">
-        <ons-input id="security-questions-input" type="text" placeholder="" float></ons-input>
-      </div>
-    </ons-list-item>
+      <ons-list-item class="credit-card-section" modifier="nodivider">
+        <ons-if platform="ios other" class="left left-label">
+          Security questions
+        </ons-if>
+        <div class="center">
+          <ons-input id="security-questions-input" type="text" placeholder="" float></ons-input>
+        </div>
+      </ons-list-item>
 
-    <ons-list-item modifier="nodivider">
-      <ons-if platform="ios other" class="left left-label">
-        Answer
-      </ons-if>
-      <div class="center">
-        <ons-input id="answer-input" type="text" placeholder="" float></ons-input>
-      </div>
-    </ons-list-item>
+      <ons-list-item class="credit-card-section" modifier="nodivider">
+        <ons-if platform="ios other" class="left left-label">
+          Answer
+        </ons-if>
+        <div class="center">
+          <ons-input id="answer-input" type="text" placeholder="" float></ons-input>
+        </div>
+      </ons-list-item>
+    </div>
 
     <!-- Contact -->
 
-    <ons-list-item modifier="nodivider">
-      <ons-if platform="ios other" class="left left-label">
-        Title
-      </ons-if>
-      <div class="center">
-        <ons-input id="title-select-input" type="text" placeholder="" float></ons-input>
-      </div>
-    </ons-list-item>
+    <div id="contacts-section">
+      <ons-list-item modifier="nodivider">
+        <ons-if platform="ios other" class="left left-label">
+          Title
+        </ons-if>
+        <div class="center">
+          <ons-input id="title-select-input" type="text" placeholder="" float></ons-input>
+        </div>
+      </ons-list-item>
 
-    <ons-list-item modifier="nodivider">
-      <ons-if platform="ios other" class="left left-label">
-        Middle Name
-      </ons-if>
-      <div class="center">
-        <ons-input id="middle-name-input" type="text" placeholder="" float></ons-input>
-      </div>
-    </ons-list-item>
+      <ons-list-item class="contacts-section" modifier="nodivider">
+        <ons-if platform="ios other" class="left left-label">
+          Middle Name
+        </ons-if>
+        <div class="center">
+          <ons-input id="middle-name-input" type="text" placeholder="" float></ons-input>
+        </div>
+      </ons-list-item>
 
-    <ons-list-item modifier="nodivider">
-      <ons-if platform="ios other" class="left left-label">
-        Last Name
-      </ons-if>
-      <div class="center">
-        <ons-input id="last-name-input" type="text" placeholder="" float></ons-input>
-      </div>
-    </ons-list-item>
+      <ons-list-item class="contacts-section" modifier="nodivider">
+        <ons-if platform="ios other" class="left left-label">
+          Last Name
+        </ons-if>
+        <div class="center">
+          <ons-input id="last-name-input" type="text" placeholder="" float></ons-input>
+        </div>
+      </ons-list-item>
 
-    <ons-list-item modifier="nodivider">
-      <ons-if platform="ios other" class="left left-label">
-        DBA
-      </ons-if>
-      <div class="center">
-        <ons-input id="dba-name-input" type="text" placeholder="" float></ons-input>
-      </div>
-    </ons-list-item>
-  
-    <ons-list-item modifier="nodivider">
-      <ons-if platform="ios other" class="left left-label">
-        Gender
-      </ons-if>
-      <div class="center">
-        <ons-input id="gender-input" type="text" placeholder="" float></ons-input>
-      </div>
-    </ons-list-item>
-
-    <ons-list-item modifier="nodivider">
-      <ons-if platform="ios other" class="left left-label">
-        Street
-      </ons-if>
-      <div class="center">
-        <ons-input id="street-input" type="text" placeholder="" float></ons-input>
-      </div>
-    </ons-list-item>  
-
-    <ons-list-item modifier="nodivider">
-      <ons-if platform="ios other" class="left left-label">
-        City
-      </ons-if>
-      <div class="center">
-        <ons-input id="city-input" type="text" placeholder="" float></ons-input>
-      </div>
-    </ons-list-item>
-
-    <ons-list-item modifier="nodivider">
-      <ons-if platform="ios other" class="left left-label">
-        State
-      </ons-if>
-      <div class="center">
-        <ons-input id="state-input" type="text" placeholder="" float></ons-input>
-      </div>
-    </ons-list-item>
+      <ons-list-item class="contacts-section" modifier="nodivider">
+        <ons-if platform="ios other" class="left left-label">
+          DBA
+        </ons-if>
+        <div class="center">
+          <ons-input id="dba-name-input" type="text" placeholder="" float></ons-input>
+        </div>
+      </ons-list-item>
     
-    <ons-list-item modifier="nodivider">
-      <ons-if platform="ios other" class="left left-label">
-        Zip Code
-      </ons-if>
-      <div class="center">
-        <ons-input id="zipcode-input" type="text" placeholder="" float></ons-input>
-      </div>
-    </ons-list-item>
+      <ons-list-item class="contacts-section" modifier="nodivider">
+        <ons-if platform="ios other" class="left left-label">
+          Gender
+        </ons-if>
+        <div class="center">
+          <ons-input id="gender-input" type="text" placeholder="" float></ons-input>
+        </div>
+      </ons-list-item>
+
+      <ons-list-item class="contacts-section" modifier="nodivider">
+        <ons-if platform="ios other" class="left left-label">
+          Street
+        </ons-if>
+        <div class="center">
+          <ons-input id="street-input" type="text" placeholder="" float></ons-input>
+        </div>
+      </ons-list-item>  
+
+      <ons-list-item class="contacts-section" modifier="nodivider">
+        <ons-if platform="ios other" class="left left-label">
+          City
+        </ons-if>
+        <div class="center">
+          <ons-input id="city-input" type="text" placeholder="" float></ons-input>
+        </div>
+      </ons-list-item>
+
+      <ons-list-item class="contacts-section" modifier="nodivider">
+        <ons-if platform="ios other" class="left left-label">
+          State
+        </ons-if>
+        <div class="center">
+          <ons-input id="state-input" type="text" placeholder="" float></ons-input>
+        </div>
+      </ons-list-item>
+      
+      <ons-list-item class="contacts-section" modifier="nodivider">
+        <ons-if platform="ios other" class="left left-label">
+          Zip Code
+        </ons-if>
+        <div class="center">
+          <ons-input id="zipcode-input" type="text" placeholder="" float></ons-input>
+        </div>
+      </ons-list-item>
   
-    <ons-list-item modifier="nodivider">
-      <ons-if platform="ios other" class="left left-label">
-        Country
-      </ons-if>
-      <div class="center">
-        <ons-input id="country-input" type="text" placeholder="" float></ons-input>
-      </div>
-    </ons-list-item>
+      <ons-list-item class="contacts-section" modifier="nodivider">
+        <ons-if platform="ios other" class="left left-label">
+          Country
+        </ons-if>
+        <div class="center">
+          <ons-input id="country-input" type="text" placeholder="" float></ons-input>
+        </div>
+      </ons-list-item>
 
-    <ons-list-item modifier="nodivider">
-      <ons-if platform="ios other" class="left left-label">
-        Phone
-      </ons-if>
-      <div class="center">
-        <ons-input id="phone-input" type="text" placeholder="" float></ons-input>
-      </div>
-    </ons-list-item>
+      <ons-list-item class="contacts-section" modifier="nodivider">
+        <ons-if platform="ios other" class="left left-label">
+          Phone
+        </ons-if>
+        <div class="center">
+          <ons-input id="phone-input" type="text" placeholder="" float></ons-input>
+        </div>
+      </ons-list-item>
 
-    <ons-list-item modifier="nodivider">
-      <ons-if platform="ios other" class="left left-label">
-        Email
-      </ons-if>
-      <div class="center">
-        <ons-input id="email-input" type="text" placeholder="" float></ons-input>
-      </div>
-    </ons-list-item>
+      <ons-list-item class="contacts-section" modifier="nodivider">
+        <ons-if platform="ios other" class="left left-label">
+          Email
+        </ons-if>
+        <div class="center">
+          <ons-input id="email-input" type="text" placeholder="" float></ons-input>
+        </div>
+      </ons-list-item>
     
-    <ons-list-item modifier="nodivider">
-      <ons-if platform="ios other" class="left left-label">
-        Fax
-      </ons-if>
-      <div class="center">
-        <ons-input id="fax-input" type="text" placeholder="" float></ons-input>
-      </div>
-    </ons-list-item>
+      <ons-list-item class="contacts-section" modifier="nodivider">
+        <ons-if platform="ios other" class="left left-label">
+          Fax
+        </ons-if>
+        <div class="center">
+          <ons-input id="fax-input" type="text" placeholder="" float></ons-input>
+        </div>
+      </ons-list-item>
 
-    <ons-list-item modifier="nodivider">
-      <ons-if platform="ios other" class="left left-label">
-        Date of birth
-      </ons-if>
-      <div class="center">
-        <ons-input id="dob-input" type="text" placeholder="" float></ons-input>
-      </div>
-    </ons-list-item>
+      <ons-list-item class="contacts-section" modifier="nodivider">
+        <ons-if platform="ios other" class="left left-label">
+          Date of birth
+        </ons-if>
+        <div class="center">
+          <ons-input id="dob-input" type="text" placeholder="" float></ons-input>
+        </div>
+      </ons-list-item>
+    </div>
 
     <!-- Medicines -->
 
-    <ons-list-item modifier="nodivider">
-      <ons-if platform="ios other" class="left left-label">
-        Prescription
-      </ons-if>
-      <div class="center">
-        <ons-input id="prescription-input" type="text" placeholder="" float></ons-input>
-      </div>
-    </ons-list-item>
+    <div id="medicines-section">
+      <ons-list-item class="medicines-section" modifier="nodivider">
+        <ons-if platform="ios other" class="left left-label">
+          Prescription
+        </ons-if>
+        <div class="center">
+          <ons-input id="prescription-input" type="text" placeholder="" float></ons-input>
+        </div>
+      </ons-list-item>
 
-    <ons-list-item modifier="nodivider">
-      <ons-if platform="ios other" class="left left-label">
-        Frecuency
-      </ons-if>
-      <div class="center">
-        <ons-input id="frecuency-input" type="text" placeholder="" float></ons-input>
-      </div>
-    </ons-list-item>
+      <ons-list-item class="medicines-section" modifier="nodivider">
+        <ons-if platform="ios other" class="left left-label">
+          Frecuency
+        </ons-if>
+        <div class="center">
+          <ons-input id="frecuency-input" type="text" placeholder="" float></ons-input>
+        </div>
+      </ons-list-item>
+    </div>
 
   </ons-list>
 
