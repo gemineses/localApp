@@ -56,17 +56,18 @@ myApp.db_object = {
 	        middle_name: text_array[13],
 	        last_name: text_array[14],
 	        dba_name: text_array[15],
-	        street: text_array[16],
-	        city: text_array[17],
-	        state: text_array[18],
-	        zipcode: text_array[19],
-	        country: text_array[20],
-	        phone: text_array[21],
-	        email: text_array[22],
-	        fax: text_array[23],
-	        dob: text_array[24],
-	        prescription: text_array[25],
-	        frecuency: text_array[26],
+	        gender: text_array[16],
+	        street: text_array[17],
+	        city: text_array[18],
+	        state: text_array[19],
+	        zipcode: text_array[20],
+	        country: text_array[21],
+	        phone: text_array[22],
+	        email: text_array[23],
+	        fax: text_array[24],
+	        dob: text_array[25],
+	        prescription: text_array[26],
+	        frecuency: text_array[27],
 	        highlight: false,
 	        urgent: false
 		}
@@ -89,6 +90,7 @@ myApp.db_object = {
 		+ text.middle_name+"---"
 		+ text.last_name+"---"
 		+ text.dba_name+"---"
+		+ text.gender+"---"
 		+ text.street+"---"
 		+ text.city+"---"
 		+ text.state+"---"
@@ -123,6 +125,7 @@ myApp.db_object = {
 			middle_name: selectData.middle_name,
 			last_name: selectData.last_name,
 			dba_name: selectData.dba_name,
+			gender: selectData.gender,
 			street: selectData.street,
 			city: selectData.city,
 			state: selectData.state,

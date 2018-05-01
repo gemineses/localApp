@@ -13,15 +13,11 @@
 
   <ons-list-title>Add a new element</ons-list-title>
   <ons-list>
-    <ons-list-item modifier="nodivider">
-      <div class="center">
-        <ons-input id="name-input" type="text" placeholder="Name" float></ons-input>
-      </div>
-    </ons-list-item>
+
     <ons-list-item modifier="nodivider">
       <div class="center">
         <!--<ons-input id="category-input" type="text" placeholder="Category" float></ons-input>-->
-        <ons-select id="category-select-input">
+        <ons-select id="category-select-input" onclick="hide(this)">
           <option value="" selectedIndex>Category</option>
           <option value="Medicines">Medicines</option>
           <option value="Credit cards">Credit cards</option>
@@ -30,7 +26,15 @@
         </ons-select>
       </div>
     </ons-list-item>
+
+    <ons-list-item modifier="nodivider">
+      <div class="center">
+        <ons-input id="name-input" type="text" placeholder="Name" float></ons-input>
+      </div>
+    </ons-list-item>
+    
     <input type="hidden" id="date-created-input">
+
     <ons-list-item modifier="nodivider">
       <div class="center">
         <ons-input id="date-expired-input" type="text" placeholder="Date expired" float></ons-input>
@@ -48,8 +52,8 @@
     </ons-list-item>
   </ons-list>
 
-  <ons-list-title>Membership data</ons-list-title>
-  <ons-list>
+  <ons-list-title class="membership-section">Membership data</ons-list-title>
+  <ons-list class="membership-section">
     <ons-list-item modifier="nodivider">
       <div class="center">
         <ons-input id="cost-input" type="text" placeholder="Cost" float></ons-input>
@@ -57,8 +61,8 @@
     </ons-list-item>
   </ons-list>
 
-  <ons-list-title>Credit card data</ons-list-title>
-  <ons-list>
+  <ons-list-title class="credit-card-section">Credit card data</ons-list-title>
+  <ons-list class="credit-card-section">
     <ons-list-item modifier="nodivider">
       <div class="center">
         <ons-input id="number-input" type="text" placeholder="Number" float></ons-input>
@@ -90,8 +94,8 @@
     </ons-list-item>
   </ons-list>
 
-  <ons-list-title>Contacts</ons-list-title>
-  <ons-list>
+  <ons-list-title class="contacts-section">Contacts</ons-list-title>
+  <ons-list class="contacts-section">
     <ons-list-item modifier="nodivider">
       <div class="center">
         <ons-select id="title-select-input">
@@ -122,6 +126,11 @@
     <ons-list-item modifier="nodivider">
       <div class="center">
         <ons-input id="dba-name-input" type="text" placeholder="dba_name" float></ons-input>
+      </div>
+    </ons-list-item>
+    <ons-list-item modifier="nodivider">
+      <div class="center">
+        <ons-input id="gender-input" type="text" placeholder="gender" float></ons-input>
       </div>
     </ons-list-item>
     <ons-list-item modifier="nodivider">
@@ -171,8 +180,8 @@
     </ons-list-item>
   </ons-list>
 
-  <ons-list-title>Medicines</ons-list-title>
-  <ons-list>
+  <ons-list-title class="medicines-section">Medicines</ons-list-title>
+  <ons-list class="medicines-section">
     <ons-list-item modifier="nodivider">
       <div class="center">
         <ons-input id="prescription-input" type="text" placeholder="prescription" float></ons-input>

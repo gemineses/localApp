@@ -65,6 +65,7 @@ myApp.controllers = {
                 middle_name: page.querySelector('#middle-name-input').value,
                 last_name: page.querySelector('#last-name-input').value,
                 dba_name: page.querySelector('#dba-name-input').value,
+                gender: page.querySelector('#gender-input').value,
                 street: page.querySelector('#street-input').value,
                 city: page.querySelector('#city-input').value,
                 state: page.querySelector('#state-input').value,
@@ -129,6 +130,7 @@ myApp.controllers = {
     page.querySelector('#middle-name-input').value = element.data.middle_name;
     page.querySelector('#last-name-input').value = element.data.last_name;
     page.querySelector('#dba-name-input').value = element.data.dba_name;
+    page.querySelector('#gender-input').value = element.data.gender;
     page.querySelector('#street-input').value = element.data.street;
     page.querySelector('#city-input').value = element.data.city;
     page.querySelector('#state-input').value = element.data.state;

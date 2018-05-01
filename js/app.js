@@ -46,3 +46,32 @@ basetest.transaction(function (tx) {
 basetest.transaction(function (tx) {
     tx.executeSql('INSERT INTO REQUEST VALUES (0, "weew")');
   });*/
+
+function hide(value){
+  if(value.value != ""){
+    document.getElementsByClassName("membership-section")[0].style.visibility = "hidden";
+    document.getElementsByClassName("credit-card-section")[0].style.visibility = "hidden";
+    document.getElementsByClassName("contacts-section")[0].style.visibility = "hidden";
+    document.getElementsByClassName("medicines-section")[0].style.visibility = "hidden";
+    document.getElementsByClassName("membership-section")[1].style.visibility = "hidden";
+    document.getElementsByClassName("credit-card-section")[1].style.visibility = "hidden";
+    document.getElementsByClassName("contacts-section")[1].style.visibility = "hidden";
+    document.getElementsByClassName("medicines-section")[1].style.visibility = "hidden";
+  }
+  if(value.value == "Contacts"){
+    document.getElementsByClassName("contacts-section")[0].style.visibility = "visible";
+    document.getElementsByClassName("contacts-section")[1].style.visibility = "visible";
+  }
+  if(value.value == "Medicines"){
+    document.getElementsByClassName("medicines-section")[0].style.visibility = "visible";
+    document.getElementsByClassName("medicines-section")[1].style.visibility = "visible";
+  }
+  if(value.value == "Credit cards"){
+    document.getElementsByClassName("credit-card-section")[0].style.visibility = "visible";
+    document.getElementsByClassName("credit-card-section")[1].style.visibility = "visible";
+  }
+  if(value.value == "Memberships"){
+   document.getElementsByClassName("medicines-section")[0].style.visibility = "visible";
+    document.getElementsByClassName("medicines-section")[1].style.visibility = "visible"; 
+  }
+}
