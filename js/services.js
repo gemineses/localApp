@@ -18,13 +18,19 @@ myApp.services = {
         list += '<ons-icon icon="ion-medkit" class="list-item__icon"></ons-icon>';
       }else if(data.category=='Credit cards'){
         list += '<ons-icon icon="ion-card" class="list-item__icon"></ons-icon>';
-      }else if(data.category=='Contacts'){
+      }else if(data.category=='Contacts-vip' || data.category == 'Contacts-business' || data.category == 'Contacts'){
         list += '<ons-icon icon="ion-person" class="list-item__icon"></ons-icon>';  
-      }else {//memberships
+      }else if(data.category=='Memberships'){//memberships
         list += '<ons-icon icon="ion-bag" class="list-item__icon"></ons-icon>';
+      }else if(data.category=='Travel'){
+        list += '<ons-icon icon="ion-plane" class="list-item__icon"></ons-icon>';
+      }else if(data.category=='Shopping'){
+        list += '<ons-icon icon="ion-pricetags" class="list-item__icon"></ons-icon>';
+      }else if(data.category=='Insurance'){
+        list += '<ons-icon icon="ion-locked" class="list-item__icon"></ons-icon>';
+      }else if(data.category=='Bills'){
+        list += '<ons-icon icon="ion-cash" class="list-item__icon"></ons-icon>';
       }
-      
-      
 
       list += '</label>' +
           '<div class="center">' +
@@ -132,10 +138,18 @@ myApp.services = {
         list = '<ons-icon icon="ion-medkit" class="list-item__icon"></ons-icon>';
       }else if(categoryLabel=='Credit cards'){
         list = '<ons-icon icon="ion-card" class="list-item__icon"></ons-icon>';
-      }else if(categoryLabel=='Contacts'){
+      }else if(categoryLabel=='Contacts' || categoryLabel=='Contacts-vip' || categoryLabel == 'Contacts-business'){
         list = '<ons-icon icon="ion-person" class="list-item__icon"></ons-icon>';  
-      }else {//memberships
+      }else if(categoryLabel=='Memberships'){//memberships
         list = '<ons-icon icon="ion-bag" class="list-item__icon"></ons-icon>';
+      }else if(categoryLabel=='Travel'){
+        list = '<ons-icon icon="ion-plane" class="list-item__icon"></ons-icon>';
+      }else if(categoryLabel=='Shopping'){
+        list = '<ons-icon icon="ion-pricetags" class="list-item__icon"></ons-icon>';
+      }else if(categoryLabel=='Insurance'){
+        list = '<ons-icon icon="ion-locked" class="list-item__icon"></ons-icon>';
+      }else if(categoryLabel=='Bills'){
+        list = '<ons-icon icon="ion-cash" class="list-item__icon"></ons-icon>';
       }
 
       var categoryItem = ons.createElement(
