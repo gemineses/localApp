@@ -116,8 +116,7 @@ myApp.controllers = {
     document.getElementById("medicines-section").style.display = "none";
   }
   
-
-  if(element.data.category == "Contacts"){
+  if(element.data.category == "Contacts-vip" || element.data.category == "Contacts-business"){
     document.getElementById("contacts-section").style.display = "block";
   }
   if(element.data.category == "Medicines"){

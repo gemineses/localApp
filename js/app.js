@@ -58,7 +58,8 @@ function hide(value){
     document.getElementsByClassName("contacts-section")[1].style.display = "none";
     document.getElementsByClassName("medicines-section")[1].style.display = "none";
   }
-  if(value.value == "Contacts"){
+
+  if(value.value == "Contacts-vip" || value.value == "Contacts-business"){
     document.getElementsByClassName("contacts-section")[0].style.display = "block";
     document.getElementsByClassName("contacts-section")[1].style.display = "block";
   }
